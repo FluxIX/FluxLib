@@ -1,0 +1,5 @@
+**/nppBackup
+**/*.bak
+**/*.suo
+**/*/obj
+**/*/bin
