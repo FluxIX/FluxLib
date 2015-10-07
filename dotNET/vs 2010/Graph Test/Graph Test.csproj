@@ -70,8 +70,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /v /y "$(SolutionDir)..\src\Collections\Generic\Graph\COPYING" "$(TargetDir)"
-copy /v /y "$(SolutionDir)..\src\Collections\Generic\Graph\COPYING.LESSER" "$(TargetDir)"
+    <PostBuildEvent>copy /v /y "$(SolutionDir)..\src\COPYING" "$(TargetDir)"
+copy /v /y "$(SolutionDir)..\src\COPYING.LESSER" "$(TargetDir)"
 </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
