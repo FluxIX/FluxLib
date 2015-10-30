@@ -267,6 +267,41 @@ namespace FluxLib.Collections.Generic.Tree
          get;
          protected set;
       }
+
+      public Boolean HasDescendent( NodeValueType value )
+      {
+         return HasDescendent( new GeneralTreeNode<NodeValueType>( value ) );
+      }
+
+      public Boolean HasDescendent( GeneralTreeNode<NodeValueType> node )
+      {
+         Boolean result = HasChild( node );
+
+         for( Int32 i = 0; !result && i < ChildrenCount; ++i )
+            result = Children[ i ].HasDescendent( node );
+
+         return result;
+      }
+
+      public Boolean HasAncestor( NodeValueType value )
+      {
+         return HasAncestor( new GeneralTreeNode<NodeValueType>( value ) );
+      }
+
+      public Boolean HasAncestor( GeneralTreeNode<NodeValueType> node )
+      {
+         Boolean result = false;
+
+         if( HasParent )
+         {
+            result = Parent.Equals( node );
+
+            if( !result )
+               result = Parent.HasAncestor( node );
+         }
+
+         return result;
+      }
       #endregion
    }
 }

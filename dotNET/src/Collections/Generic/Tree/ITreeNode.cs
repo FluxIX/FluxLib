@@ -39,6 +39,14 @@ namespace FluxLib.Collections.Generic.Tree
 
       Boolean HasChild( ConcreteTreeNodeType node );
 
+      Boolean HasDescendent( NodeValueType value );
+
+      Boolean HasDescendent( ConcreteTreeNodeType node );
+
+      Boolean HasAncestor( NodeValueType value );
+
+      Boolean HasAncestor( ConcreteTreeNodeType node );
+
       Boolean HasParent
       {
          get;
