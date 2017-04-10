@@ -52,7 +52,7 @@ class WildcardMatch( object ):
       *: matches zero or more occurrances
       ?: matches zero or one occurrance
       +: matches one or more occurrances
-      {m,n}: matches n to m occurrances
+      {m,n}: matches m to n occurrances
       """
 
       variant_rewrite_rules = { "*": (0, None), "?": (0,1), "+": (1,None) }
